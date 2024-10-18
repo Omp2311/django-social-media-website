@@ -2,9 +2,12 @@
 @import url('https://fonts.googleapis.com/css?family=Muli:300,400,400i,500,700,800');
 @import url('https://fonts.googleapis.com/css?family=Satisfy');
 @font-face {
-    font-family: calibri;
-    
+    font-family: 'Calibri';
+    src: url('path/to/calibri.woff2') format('woff2'),
+         url('path/to/calibri.woff') format('woff'),
+         url('path/to/calibri.ttf') format('truetype');
 }
+
 
 
 /*===============
@@ -74,11 +77,11 @@ img {
     position: relative;
     z-index: 1;
     width: 1230px;
-    -webkit-box-shadow: 0 0 6px #747474;
-    -moz-box-shadow: 0 0 6px #747474;
-    -ms-box-shadow: 0 0 6px #747474;
-    -o-box-shadow: 0 0 6px #747474;
-    box-shadow: 0 0 6px #747474;
+    -webkit-box-shadow: 0 0 6px #1090f9;
+    -moz-box-shadow: 0 0 6px #dd0e2d;
+    -ms-box-shadow: 0 0 6px #eb0d0d;
+    -o-box-shadow: 0 0 6px #eb0a0a;
+    box-shadow: 0 0 6px #f30808;
 }
 
 section {
@@ -207,7 +210,7 @@ section {
 }
 
 .pattern:before {
-    background: pink url("../images/dot-pattern.png") repeat scroll 0 0;
+    background: rgb(15, 0, 3) url("../images/dot-pattern.png") repeat scroll 0 0;
     opacity: 0.45;
 }
 
@@ -268,11 +271,11 @@ textarea {
 }
 
 a:hover.facebook {
-    background: #516eab;
+    background: #1f04ea;
 }
 
 a:hover.instagram {
-    background: #444;
+    background: #f30505;
 }
 
 a:hover.twitter {
@@ -280,7 +283,7 @@ a:hover.twitter {
 }
 
 a:hover.google {
-    background: #dd4b39;
+    background: #06b0f3;
 }
 
 a:hover.pinterest {
@@ -407,7 +410,7 @@ iframe {
 /*-- page loader ----*/
 
 
-/*.se-pre-con {
+.se-pre-con {
 	position: fixed;
 	left: 0px;
 	top: 0px;
@@ -415,7 +418,7 @@ iframe {
 	height: 100%;
 	z-index: 9999;
 	background: url(../images/loader.gif) center no-repeat #000;
-}*/
+}
 
 #topcontrol {
         display: flex;
@@ -771,12 +774,13 @@ header.sticky {
 }
 
 .timeline-info {
-    background: ##b0b3b8 none repeat scroll 0 0;
+    background: #b0b3b8 none repeat scroll 0 0;
     display: block;
     line-height: 59px;
     width: 100%;
     color: #000;
 }
+
 
 .timeline-info > ul {
     display: inline-block;
@@ -1244,8 +1248,16 @@ header.sticky {
     margin-top: 7px;
     width: 100%;
 }
+.activity-meta > h6 a {
+    color: #3498db;  /* Sets the link color */
+    text-decoration: none;  /* Removes underline */
+    font-weight: bold;  /* Makes the text bold */
+}
 
-.activity-meta > h6 a {}
+.activity-meta > h6 a:hover {
+    color: #2c3e50;  /* Changes the color on hover */
+    text-decoration: underline;  /* Adds underline on hover */
+}
 
 .activitiez > li::before {
     content: "";
@@ -1484,7 +1496,7 @@ form button {
 }
 
 .we-video-info > ul li span.like:hover .we-video-info > ul li span.dislike:hover {
-    trnsform: scale(1.1);
+    transform: scale(1.1);
 }
 
 
@@ -4026,9 +4038,10 @@ a.forgot-pwd {
 
 .more-options {
     display: inline-block;
-    float: right;
     position: relative;
+    text-align: right; /*  content aligned to the right inside */
 }
+
 
 .more-options > i {
     color: #999 !important;
@@ -6576,26 +6589,18 @@ a.reply {
 .help-list > a {
     background: #fafafa none repeat scroll 0 0;
     border: 1px solid #eaeaea;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    -o-border-radius: 30px;
     border-radius: 30px;
     color: #333;
-    display: inline-block;
-    float: right;
+    display: inline-block;  /* Keep this */
     font-size: 12px;
     font-weight: 300;
     letter-spacing: 1px;
     margin-top: 20px;
     padding: 8px 19px;
     text-transform: capitalize;
-    -webkit-transition: all 0.2s linear 0s;
-    -moz-transition: all 0.2s linear 0s;
-    -ms-transition: all 0.2s linear 0s;
-    -o-transition: all 0.2s linear 0s;
     transition: all 0.2s linear 0s;
 }
+
 
 .help-list > a:hover {
     color: #000;
@@ -7323,7 +7328,7 @@ ul.offcanvas-menu ul {
     -ms-background-clip: text;
     -o-background-clip: text;
     background-clip: text;
-    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
     margin-right: 10px;
     font-size: 60px;
     vertical-align: middle;
@@ -8504,18 +8509,14 @@ a.shopping-cart > i {
 }
 
 .slider-nav-gold .slick-track > li {
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
     border-radius: 5px;
     margin-top: 10px;
     border: 3px solid #eee;
     width: 124px !important;
-    display: inline-block;
-    float: right;
+    display: inline-block;  /* Keep this */
     cursor: pointer;
 }
+
 
 .slider-nav-gold .slick-track > li.slick-current {
     margin-right: 10px;
